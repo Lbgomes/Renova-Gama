@@ -5,42 +5,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1440, maximum-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/responsive.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,300&display=swap"
+    rel="stylesheet">
 </head>
 
-<body style="margin: 0; background: rgba(255, 255, 255, 1)">
-
-  <div id="main">
-      <div id="form">
-      
-          <h1>A rotina de estudos do seu filho foi prejuicada pela pandemia e houve uma queda na qualidade do material utilizado?</h1>
-          <h4>Baixe nosso e-book e aproveite nossas dicas de como otimizar o aprendizado em tempos de estudo remoto.</h4>
-          
-          <div id="box">
-            <h3>Baixe agora o nosso e-book exclusivo!</h3>
-                <form method="POST" action="https://smtl.gama.academy/leads/1ccc7f61-25e3-11eb-bf8d-0d63c80760d2">
-                  <input name="name" type="text" pattern="^\D{2,}\s[\D\s]{2,}$" title="Digite seu nome completo" placeholder="Nome e sobrenome" required />
-                  <input name="email" type="email" placeholder="E-mail" required />
-                  <input name="redirectTo" type="hidden" value="https://gama.academy" />
-                  <input value="Baixar e-book" type="submit" />
-                </form>
-          </div>
-
+<body>
+  <div class="fundo">
+<div class="cor-logo">
+  <img src="./images/logo-renova-branco-1@2x.png" class="foto" alt="">
+</div>
+    <form method="POST" action="https://smtl.gama.academy/leads/1ccc7f61-25e3-11eb-bf8d-0d63c80760d2">
+      <div class="form">
+        <div class="informacao">
+          <label>Nome completo:</label>
+          <input name="name" type="text" class="input" pattern="^\D{2,}\s[\D\s]{2,}$" title="Digite seu nome completo"
+          placeholder="Pedro Augusto da Silva" required />
+        </div>
+        <div class="informacao">
+          <label>E-mail:</label>
+          <input name="email" type="email" class="input" placeholder="email@email.com" required />
+        </div>
+        <input name="redirectTo" type="hidden" value="https://gama.academy" />
+        <input value="BAIXE NOSSO EBOOK!" class="input botao" type="submit" />
       </div>
-
-      <div id="illustration">
-        <img src="images/mae-filho-aula.svg" id="ilustra" alt="" srcset="">
-      </div>
-      
-      <div id="saiba-mais">
-        <h4>Saiba mais</h4>
-        <img src="images/arrow-down.gif" alt="" srcset="">
-      </div>
-
+    </form>
   </div>
 
-  
+  <p class="texto">Como está sendo a rotina de estudo dos seus filhos nessa pandemia? Houve uma queda na qualidade do material utilizado?
+<br>
+<br>
+    Beixe nosso e-book e aproveite nossas dicas de como<b> otimizar o aprendizado durante a pandemia!</b></p>
+<div class="espaco-lateral">
+
+  <h1>Quem somos?</h1>
+  <hr>
+</div>
+<div class="renova-logo">
+
+  <p class="renova">Renova chega para combinar metodologias inovadoras, tecnologia educacional e práticas socioemocionais. 
+    
+    Uma escola que chegou para revolucionar as metodologias de aprendizado acreditamos que educação é um processo de transformação social visando a formação de ser humanos mais empáticos, sensíveis e criativos.
+    
+    Nossa metodologia consiste em orientar e direcionar família e alunos para o caminho da revolução educacional para as habilidades necessárias para o futuro.</p>
+    <img src="./images/logo-renova-positivo-1@2x.png" class="logo" alt="">
+  </div>
+<footer>
+  <p>Todos os direitos reservados à Renova</p>
+</footer>
 </body>
 
 </html>

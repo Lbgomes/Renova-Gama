@@ -1,19 +1,143 @@
-#main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto;
-    margin: 0 auto;
-    width: 80%;
-    align-items: center;
-    height: 100vh;
-}
 
+*{
+    margin:0px;
+    padding:0px
+}
+body{
+    width:100vw;
+    height:100%;
+}
+.cor-logo{
+    background:rgba(0, 56, 68, 0.15);
+}
+.foto{
+    height:50px;
+    margin-left:10%;
+    margin-top:1%;
+}
+.fundo{
+    background-image: url(./images/Group\ 2.png);
+    padding-bottom: 22%;
+    background-size:100vw;
+}
 html {
     font-family: 'Open Sans';
     color: #34405A;
 }
 
-#form {
+.form{
+    /* padding-top:15% */
+    margin-top:15%;
+    margin-left:10%;
+
+}
+label{
+    color:#003844;
+    font-size:14px;
+    font-weight: 600;
+    margin-top:5%;
+}
+form{
+    display:flex;
+    flex-flow:column;
+    max-width: 300px;
+    background:white;
+    border-radius:20px;
+    height:334px;
+    margin-left:10%;
+    margin-top: 9%;
+}
+input{
+    background: none;
+    border:none;
+    max-width: 80%;
+    font-weight:300;
+    margin-top:5%;
+    color:#6F6F6F;
+    border-bottom: solid 1px #003844;
+}
+.input{
+    border-bottom: solid 1px #003844;
+}
+input.botao{
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    max-width: 183px;
+    height: 40px;
+    background:#0C7771;
+    border-radius:10px;
+    letter-spacing: 0.4px;
+    align-self: center;
+    font-size:14px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: 800;
+    border:none;
+    margin-left: 7%;
+    margin-top: inherit;
+
+}
+input.botao:hover{
+    background:#095c58;
+}
+
+.informacao{
+    display:flex;
+    flex-flow: column;
+}
+
+.texto{
+    color:#003844;
+    font-size:16px;
+    width:422px;
+    margin-left: 60%;
+    margin-top:5%
+}
+h1{
+    font-weight: 400;
+    font-size:30px;
+}
+hr{
+    background:#0C7771;
+    height:2px;
+    width: 297px;
+    margin-top:1%
+}
+.espaco-lateral{
+    margin-left: 15%;
+}
+
+.renova{
+    width:486.56px;
+    margin-left: 15%;
+    margin-top: 2%;
+}
+.logo{
+    width:388px;
+    margin-left:7%;
+}
+.renova-logo{
+display:flex;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#0C7771;
+    color:white;
+    font-size:16px;
+    font-weight:500;
+    height:80px;
+    position: absolute;
+    bottom: 1;
+    left: 0;
+    width:100%;
+
+
+}
+
+/* #form {
  
     padding: 30px;
 }
@@ -98,4 +222,4 @@ form {
 #saiba-mais h4 {
    margin-bottom: 0;
    color: #83827E;
-}
+} */
