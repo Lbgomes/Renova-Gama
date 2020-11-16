@@ -4,18 +4,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1440, maximum-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,300&display=swap" rel="stylesheet">
 </head>
 
 <body style="margin: 0; background: rgba(255, 255, 255, 1)">
-  <h1>Exemplo de formulário para o Show me the Leads</h1>
-  <form method="POST" action="https://smtl.gama.academy/leads/1ccc7f61-25e3-11eb-bf8d-0d63c80760d2">
-    <input name="name" type="text" pattern="^\D{2,}\s[\D\s]{2,}$" title="Digite seu nome completo" required />
-    <input name="email" type="email" required />
-    <input name="redirectTo" type="hidden" value="https://gama.academy" />
-    <input type="submit" />
-  </form>
-  <!-- teste diniz -->
+
+  <div id="main">
+      <div id="form">
+      
+          <h1>A rotina de estudos do seu filho foi prejuicada pela pandemia e houve uma queda na qualidade do material utilizado?</h1>
+          <h4>Baixe nosso e-book e aproveite nossas dicas de como otimizar o aprendizado em tempos de estudo remoto.</h4>
+          
+          <div id="box">
+            <h3>Baixe agora o nosso e-book exclusivo!</h3>
+                <form method="POST" action="https://smtl.gama.academy/leads/1ccc7f61-25e3-11eb-bf8d-0d63c80760d2">
+                  <input name="name" type="text" pattern="^\D{2,}\s[\D\s]{2,}$" title="Digite seu nome completo" placeholder="Nome e sobrenome" required />
+                  <input name="email" type="email" placeholder="E-mail" required />
+                  <input name="redirectTo" type="hidden" value="https://gama.academy" />
+                  <input value="Baixar e-book" type="submit" />
+                </form>
+          </div>
+
+      </div>
+
+      <div id="illustration">
+        <img src="images/mae-filho-aula.svg" id="ilustra" alt="" srcset="">
+      </div>
+      
+      <div id="saiba-mais">
+        <h4>Saiba mais</h4>
+        <img src="images/arrow-down.gif" alt="" srcset="">
+      </div>
+
+  </div>
+
+  
 </body>
 
 </html>
