@@ -2,31 +2,20 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1440, maximum-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440, maximum-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body style="margin: 0; background: rgba(255, 255, 255, 1)">
-    <h1>Exemplo de formulário para o Show me the Leads</h1>
-    <form method="POST" action="https://smtl.gama.academy/leads/1ccc7f61-25e3-11eb-bf8d-0d63c80760d2">
-      <input
-        name="name"
-        type="text"
-        pattern="^\D{2,}\s[\D\s]{2,}$"
-        title="Digite seu nome completo"
-        required
-      />
-      <input
-        name="email"
-        type="email"
-        title="Digite um email válido"
-        required
-      />
-      <input name="redirectTo" type="hidden" value="https://gama.academy" />
-      <input name="debugMode" type="hidden" value="true" />
-      <input type="submit" />
-    </form>
+  <h1>Exemplo de formulário para o Show me the Leads</h1>
+  <form method="POST" action="https://smtl.gama.academy/leads/1ccc7f61-25e3-11eb-bf8d-0d63c80760d2">
+    <input name="name" type="text" pattern="^\D{2,}\s[\D\s]{2,}$" title="Digite seu nome completo" required />
+    <input name="email" type="email" required />
+    <input name="redirectTo" type="hidden" value="https://gama.academy" />
+    <input name="debugMode" type="hidden" value="false"/>
+    <input type="submit" />
+  </form>
 </body>
 
 </html>
