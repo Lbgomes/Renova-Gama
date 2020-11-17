@@ -19,6 +19,11 @@ img{
         grid-template-columns: 1fr;
         display: block;
     }
+
+
+    .extra {
+        display: none;
+    }
   }
 
 #hero {
@@ -43,15 +48,29 @@ img{
     padding-left: 40px;
 }
 
+#logo-img {
+    min-width: 100px;
+}
+
 #hero-content {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
     align-content: center; 
+    column-gap: 40px;
 }
+
+@media only screen and (min-width: 750px) {
+   #form-box {
+    justify-self: end;
+    align-self: center;
+   }
+   h1 {
+    margin-bottom: 40px;
+   }
+  }
 
 @media only screen and (max-width: 750px) {
     #hero-content {
@@ -60,10 +79,12 @@ img{
     }
     #form-box {
         margin: 0 auto;
+        justify-self: center;
     }
-    
+    #titulo {
 
-
+    text-align: center;
+    }
   }
 
 #form-box {
@@ -78,9 +99,7 @@ img{
     max-width: 400px;
     width: 100%;
   box-sizing: border-box;
-  grid-row: 1;
-  grid-column: 2;
-  color:#003844
+  color:#003844;
 }
 
 
@@ -88,14 +107,13 @@ img{
     display: grid;
     grid-template-columns: 1fr;
     font-family: 'Poppins';
-    color:#003844
+    color:#003844;
 }
 
 #text1 {
-    grid-row: 1;
-    grid-column: 2;
     margin: 30px;
     font-family: 'Poppins';
+    grid-column: 2;
 }
 
 #quem-somos {
@@ -150,7 +168,7 @@ hr{
 }
 
 p {
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
