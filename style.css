@@ -47,12 +47,12 @@ img{
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 2fr;
     justify-content: center;
-    align-content: center; 
-    display:flex;
-    justify-content:space-around;
+    align-content: center;
+    justify-content: space-around;
     place-self: start;
+    grid-gap: 20%;
   }
 .formulario{
     display:flex;
@@ -68,7 +68,8 @@ img{
     margin-bottom: 50px;
     max-width: 400px;
     box-sizing: border-box;
-    grid-row: 2;
+    grid-row: 1;
+    grid-column: 2;
     height: 320px;
 }
 
@@ -88,13 +89,13 @@ img{
 }
 #text2 {
     grid-row: 1;
-    grid-column: 2;
-    margin-top:2%;
-    margin-left: 0%;
+    grid-column: 1;
+    margin-top: 2%;
+    margin-left: 15%;
     font-family: 'Poppins';
-    color:#003844;
-    width:460px;
-    font-size:18px;
+    color: #003844;
+    width: 460px;
+    font-size: 18px;
 }
 
 ul{
@@ -200,7 +201,78 @@ width:400px;
     /* #form-box {
         margin: 0 auto;
     } */
-}
+}  
+@media only screen and (min-width: 300px) {
+
+    #text2 {
+        grid-row: 1;
+        grid-column: 1;
+        margin-top: 2%;
+        margin-left: 15%;
+        font-family: 'Poppins';
+        color: #003844;
+        width: 957px;
+        font-size: 36px;
+    }
+    h1{
+        width: 873px;
+    }
+    ul{
+        font-size: 42px;
+        font-weight: 600;
+    }
+    #form-box {
+        background: white;
+        border-radius: 20px;
+        padding-top: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+        margin: 20px;
+        margin-bottom: 50px;
+        max-width: 800px;
+        box-sizing: border-box;
+        grid-row: 2;
+        grid-column: 1;
+        height: 600px;
+        margin-left: 12rem;
+    }
+    #hero-content{
+        grid-template-columns:2fr;
+        grid-gap:0%;
+    }
+    .solucionar{
+        font-size:40px;
+    }
+    h4{
+
+        font-size:40px;
+    }
+
+    input{
+
+        width: 130%;
+        font-size:32px;
+        
+    }
+    form{
+        margin-left:5rem;
+    }
+    .input{
+        border-bottom: solid 2px #003844;
+    }
+    input.botao{
+        width:400px;
+        margin-left: inherit;
+    }
+
+    #hero {
+
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); 
+        height:150vh;
+    }
+  }
+
 @media(max-width: 800px){
     #hero-content{
         display:flex;
@@ -233,7 +305,7 @@ width:400px;
 
 
 }
-@media only screen and (max-width: 1300px) {
+/* @media only screen and (max-width: 1300px) {
     #main {
         grid-template-columns: 1fr;
         display: block;
@@ -243,3 +315,5 @@ width:400px;
     }
 
   }
+
+ */
