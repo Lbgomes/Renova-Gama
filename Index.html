@@ -4,56 +4,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1440, maximum-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="/responsive.css">
+  <link rel="stylesheet" href="style-responsive.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,300&display=swap"
     rel="stylesheet">
+    <title>Renova Futuro</title>
 </head>
 
 <body>
-  <div class="fundo">
-<div class="cor-logo">
-  <img src="./images/logo-renova-branco-1@2x.png" class="foto" alt="">
-</div>
-    <form method="POST" action="https://smtl.gama.academy/leads/1ccc7f61-25e3-11eb-bf8d-0d63c80760d2">
-      <div class="form">
-        <div class="informacao">
-          <label>Nome completo:</label>
-          <input name="name" type="text" class="input" pattern="^\D{2,}\s[\D\s]{2,}$" title="Digite seu nome completo"
-          placeholder="Pedro Augusto da Silva" required />
-        </div>
-        <div class="informacao">
-          <label>E-mail:</label>
-          <input name="email" type="email" class="input" placeholder="email@email.com" required />
-        </div>
-        <input name="redirectTo" type="hidden" value="https://gama.academy" />
-        <input value="BAIXE NOSSO EBOOK!" class="input botao" type="submit" />
+  
+  
+    
+    <div id="hero">
+      
+      <div id="logo">
+        <img src="./images/logo-renova-branco-1@2x.png" alt="">
       </div>
-    </form>
-  </div>
+      <div id="hero-content">
+        <div id="titulo">
+           <h1>Seu filho está realmente conseguindo <strong>aprender em casa?</strong></h1>
+      </div>
+          <div id="form-box">
+                  <form method="POST" action="https://smtl.gama.academy/leads/1ccc7f61-25e3-11eb-bf8d-0d63c80760d2">
+                   <h4>Nome completo</h4>
+                    <input name="name" type="text" class="input" pattern="^\D{2,}\s[\D\s]{2,}$" title="Digite seu nome completo"
+                    placeholder="Pedro Augusto da Silva" required />
+                    <h4>E-mail</h4>
+                    <input name="email" type="email" class="input" placeholder="email@email.com" required />
+                  
+                  <input name="redirectTo" type="hidden" value="https://gama.academy" />
+                  <input value="BAIXE NOSSO EBOOK!" class="input botao" type="submit" />
+                </form>
+          </div>
 
-  <p class="texto">Como está sendo a rotina de estudo dos seus filhos nessa pandemia? Houve uma queda na qualidade do material utilizado?
-<br>
-<br>
-    Beixe nosso e-book e aproveite nossas dicas de como<b> otimizar o aprendizado durante a pandemia!</b></p>
-<div class="espaco-lateral">
+        </div>
+      </div>
+      <div id="main">
+          <div id="text1">
+                  <p class="texto">Como está sendo a rotina de estudo dos seus filhos nessa pandemia? Houve uma queda na qualidade do material utilizado?
+                <br>
+                <br>
+                    Baixe nosso e-book e aproveite nossas dicas de como<b> otimizar o aprendizado durante a pandemia!</b></p>
+  
+            </div>
+ 
+            
+<div id="quem-somos">
 
-  <h1>Quem somos?</h1>
+  
+      <h2>Quem somos?</h2>
   <hr>
-</div>
-<div class="renova-logo">
 
-  <p class="renova">Renova chega para combinar metodologias inovadoras, tecnologia educacional e práticas socioemocionais. 
-    
+  <p class="renova">Renova chega para combinar metodologias inovadoras, tecnologia educacional e práticas socioemocionais. </p>
+    <p>
     Uma escola que chegou para revolucionar as metodologias de aprendizado acreditamos que educação é um processo de transformação social visando a formação de ser humanos mais empáticos, sensíveis e criativos.
-    
+  </p>
+    <p>
     Nossa metodologia consiste em orientar e direcionar família e alunos para o caminho da revolução educacional para as habilidades necessárias para o futuro.</p>
-    <img src="./images/logo-renova-positivo-1@2x.png" class="logo" alt="">
+</div>
+<div id="logo-final">
+    <img src="./images/logo-renova-positivo-1@2x.png" id="logo-color" alt="">
   </div>
+  
+</div>
+
 <footer>
   <p>Todos os direitos reservados à Renova</p>
 </footer>
