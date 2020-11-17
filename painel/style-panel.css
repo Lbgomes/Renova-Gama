@@ -1,0 +1,25 @@
+#board {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    padding: 20px;
+    row-gap: 20px;
+}
+
+#board > div:nth-child(10n + 6),
+#board > div:nth-child(10n + 7),
+#board > div:nth-child(10n + 8),
+#board > div:nth-child(10n + 9),
+#board > div:nth-child(10n + 10) {
+  background:rgba(0,0,0,0.1);
+  padding: 20px 0;    
+}
+
+button {
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background: #333333;
+    margin-left: 10px;
+}
+
+button:focus { outline: none; }
