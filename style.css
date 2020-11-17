@@ -41,7 +41,6 @@ img{
     margin: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 150vh;
 }
 
 #logo {
@@ -90,9 +89,9 @@ img{
    }
    h1 {
     margin-bottom: 40px;
+    margin-top: 20px;
    }
    #hero {
-    height:150vh;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); 
    }
@@ -216,7 +215,6 @@ footer {
 h1 {
     font-family: 'Poppins';
     font-weight: normal;
-    margin-top: 0px;
     color:#003844;
 }
 
