@@ -13,6 +13,9 @@ img{
     margin: 0 auto;
     
 }
+.fundo{
+    background:rgba(0, 56, 68, 0.15);
+}
 
 @media only screen and (max-width: 750px) {
     #main {
@@ -38,6 +41,7 @@ img{
     margin: 0;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 150vh;
 }
 
 #logo {
@@ -65,6 +69,7 @@ img{
     font-family: 'Poppins';
     font-size: 0.8em;
     margin-top: 20px;
+    color: #003844;
 }
 
 @media only screen and (min-width: 750px) {
@@ -87,9 +92,9 @@ img{
     margin-bottom: 40px;
    }
    #hero {
-
+    height:150vh;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); 
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); 
    }
   }
 
@@ -105,6 +110,7 @@ img{
     }
     #titulo {
     text-align: center;
+    margin-left: 10%;
     }
     h1 {
         font-size: 1.25em;
@@ -136,6 +142,7 @@ img{
     margin: 30px;
     font-family: 'Poppins';
     grid-column: 2;
+    color: #003844;
 }
 
 #quem-somos {
@@ -143,6 +150,7 @@ img{
     grid-column: 1;
     margin: 30px;
     font-family: 'Poppins';
+    color: #003844;
 }
 
 #logo-final {
@@ -161,7 +169,8 @@ input{
 }
 .input{
     border-bottom: solid 1px #000000;
-    border-radius:1px
+    border-radius:1px;
+    color: #003844;
 }
 input.botao{
     color:white;
@@ -173,6 +182,7 @@ input.botao{
     font-weight: bold;
     font-family: 'Poppins';
     place-self: center;
+
 }
 input.botao:hover{
     background:#095c58;
@@ -215,6 +225,7 @@ h1 {
     margin: 20px;
     font-size: 1.15em;
     color: #003844;
+    margin-left: 10%;
 }
 
 ul{
