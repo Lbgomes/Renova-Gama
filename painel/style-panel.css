@@ -14,7 +14,7 @@
   padding: 20px 0;    
 }
 
-button {
+#board button {
     border-radius: 50%;
     border: none;
     color: white;
@@ -23,3 +23,87 @@ button {
 }
 
 button:focus { outline: none; }
+
+#menu button {
+  padding: 20px;
+  border: none;
+}
+
+#menu button:hover{
+  background: #e0e0e0;
+}
+
+
+#main {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin: 40px;
+}
+
+#main div {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+
+#chart1 {
+  background: rgb(62, 158, 49);
+}
+
+#chart2 {
+  background: rgb(160, 39, 39);
+}
+
+#chart3 {
+  background: rgb(37, 26, 190);
+}
+
+#chart4 {
+  background: rgb(49, 15, 15);
+}
+
+#chart5 {
+  background: rgb(21, 95, 52);
+}
+
+#chart6 {
+  background: rgb(185, 35, 160);
+}
+
+#chart7 {
+  background: rgb(10, 177, 255);
+}
+
+#chart8 {
+  background: rgb(224, 176, 42);
+}
+
+#chart9 {
+  background: rgb(66, 253, 20);
+}
+
+#chart10 {
+  background: rgb(218, 148, 148);
+}
+
+#chart11 {
+  background: rgb(66, 23, 61);
+}
+
+#main {
+      /* 1 pixel black shadow to left, top, right and bottom */
+      text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  
+      font-family: sans; color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  border-bottom: 2px solid black !important;
+}
