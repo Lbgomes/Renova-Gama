@@ -21,6 +21,8 @@ function getLeads() {
 
   function print() {
       document.getElementById('count').innerText += ` ${leads.length}`
+      document.getElementById('countValid').innerText += ` ${validateLeads(leads)}`
+      document.getElementById('percentage').innerText += ` (${((validateLeads(leads)/leads.length)*100).toFixed(2)}%)`
       const board = document.getElementById('board')
       for (let index = 0; index < leads.length; index++) {
         let cardCount = document.createElement("div")
@@ -274,6 +276,7 @@ function getLeads() {
         let dados = {
             "name": nome,
             "leads": leads.length,
+            "validLeads": validateLeads(leads),
             "id": chart,
             "group": group,
             "position": 0
@@ -319,15 +322,25 @@ function getLeads() {
                 title.innerText = `${ranking[index].name}`
                 let subtitle = document.createElement("h5")
                 subtitle.innerText = `${ranking[index].position}° lugar`
-                let bar = document.createElement("div")
-                bar.innerText = `${ranking[index].leads} leads`
-                bar.style.width = `${ranking[index].leads/10}%`
-                bar.setAttribute("class", "div-bar")
-                bar.setAttribute("id", ranking[index].id)
+
+                let wholeBar = document.createElement("div")
+                wholeBar.setAttribute("class", "whole-bar")
+                  let bar = document.createElement("div")
+                    let validBar = document.createElement("div")
+                    validBar.style.width = `${parseInt((ranking[index].validLeads/ranking[index].leads)*100)}%`
+                    validBar.setAttribute("class", "div-bar-valid")
+                  bar.style.width = `${parseInt(ranking[index].leads/10)}%`
+                  bar.setAttribute("class", "div-bar")
+                  bar.setAttribute("id", ranking[index].id)
 
                 title.appendChild(subtitle) 
+                bar.appendChild(validBar)
+                wholeBar.appendChild(bar)
+                let legenda = document.createElement("h5")
+                legenda.innerHTML = `<strong>${ranking[index].validLeads} leads válidos</strong> de ${ranking[index].leads} (${((ranking[index].validLeads/ranking[index].leads)*100).toFixed(2)}%)`
+                wholeBar.appendChild(legenda)
                 document.getElementById('main').appendChild(title) 
-                document.getElementById('main').appendChild(bar)  
+                document.getElementById('main').appendChild(wholeBar)  
 
                 if (ranking[index].leads > 1000) {
                     document.getElementById(chart).style.width = `100%`
@@ -361,4 +374,17 @@ function changeActive(id) {
     
   }
   document.getElementById(id).classList.add('active')
+}
+
+
+function validateLeads(dadosGrupo) {
+    let emailsValidos = []
+    let ipsValidos = []
+    for (let index = 0; index < dadosGrupo.length; index++) {
+      if (!emailsValidos.includes(dadosGrupo[index].email) && !dadosGrupo[index].email.includes('test') && !ipsValidos.includes(dadosGrupo[index].ip)) {
+        emailsValidos.push(dadosGrupo[index].email)
+        ipsValidos.push(dadosGrupo[index].ip)
+      } 
+  }
+  return emailsValidos.length
 }
