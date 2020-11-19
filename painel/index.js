@@ -284,7 +284,7 @@ function getLeads() {
           ranking.unshift(dados);
 
           if (ranking.length >= 11) {
-            ranking.sort((a, b) => (a.leads > b.leads) ? -1 : 1)
+            ranking.sort((a, b) => (a.validLeads > b.validLeads) ? -1 : 1)
 
             for (let index = 0; index < ranking.length; index++) {
               ranking[index].position = index + 1
@@ -300,7 +300,7 @@ function getLeads() {
     function printBars(tipo) {
 
       if (tipo == 'rank') {
-        ranking.sort((a, b) => (a.leads > b.leads) ? -1 : 1)
+        ranking.sort((a, b) => (a.validLeads > b.validLeads) ? -1 : 1)
       } else {
         ranking.sort((a, b) => (a.group > b.group) ? 1 : -1)
       }

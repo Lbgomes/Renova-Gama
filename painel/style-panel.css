@@ -64,7 +64,7 @@ button:focus { outline: none; }
 }
 
 .active {
-  border-bottom: 2px solid black !important;
+  border-bottom: 3px solid rgb(10, 177, 255) !important;
 }
 
 h5 {
