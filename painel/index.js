@@ -69,7 +69,7 @@ function getLeads() {
       .then((responseJson) => {
         // print(grupo1, 'grupo1')
 
-        createRank(grupo1, 'chart1', 'Grupo 1')
+        createRank(grupo1, 'chart1', 'Grupo 1', 1)
       })
 
 
@@ -89,7 +89,7 @@ function getLeads() {
       .then((responseJson) => {
         // print(grupo2, 'grupo2')
 
-        createRank(grupo2, 'chart2', 'Grupo 2')
+        createRank(grupo2, 'chart2', 'Grupo 2', 2)
       })
 
 
@@ -109,7 +109,7 @@ function getLeads() {
       .then((responseJson) => {
         // print(grupo3, 'grupo3')
 
-        createRank(grupo3, 'chart3', 'Grupo 3')
+        createRank(grupo3, 'chart3', 'Grupo 3', 3)
       })
 
 
@@ -129,7 +129,7 @@ function getLeads() {
       .then((responseJson) => {
         // print(grupo4, 'grupo4')
 
-        createRank(grupo4, 'chart4', 'Grupo 4')
+        createRank(grupo4, 'chart4', 'Grupo 4', 4)
       })
 
 
@@ -149,7 +149,7 @@ function getLeads() {
       .then((responseJson) => {
         // print(grupo5, 'grupo5')
 
-        createRank(grupo5, 'chart5', 'Grupo 5')
+        createRank(grupo5, 'chart5', 'Grupo 5', 5)
       })
 
     
@@ -168,7 +168,7 @@ function getLeads() {
       .then((responseJson) => { 
         // print(grupo6, 'grupo6')
 
-        createRank(grupo6, 'chart6', 'Grupo 6')
+        createRank(grupo6, 'chart6', 'Grupo 6', 6)
       })
 
   
@@ -188,7 +188,7 @@ function getLeads() {
       .then((responseJson) => {
         // print(grupo7, 'grupo7')
 
-        createRank(grupo7, 'chart7', 'Grupo 7')
+        createRank(grupo7, 'chart7', 'Grupo 7', 7)
       })
 
 
@@ -207,7 +207,7 @@ function getLeads() {
       .then((responseJson) => {
         // print(grupo8, 'grupo8')
 
-        createRank(grupo8, 'chart8', 'Grupo 8')
+        createRank(grupo8, 'chart8', 'Grupo 8', 8)
       })
 
 
@@ -227,7 +227,7 @@ function getLeads() {
       .then((responseJson) => {
         // print(grupo9, 'grupo9')
 
-        createRank(grupo9, 'chart9', 'Grupo 9')
+        createRank(grupo9, 'chart9', 'Grupo 9', 9)
       })
 
 
@@ -245,7 +245,7 @@ function getLeads() {
       })
       .then((responseJson) => {
         // print(grupo10, 'grupo10')
-        createRank(grupo10, 'chart10', 'Grupo 10')
+        createRank(grupo10, 'chart10', 'Grupo 10', 10)
       })
 
 
@@ -263,32 +263,45 @@ function getLeads() {
       })
       .then((responseJson) => {
         // print(grupo11, 'grupo11')
-        createRank(grupo11, 'chart11', 'Grupo 11')
+        createRank(grupo11, 'chart11', 'Grupo 11', 11)
       })
 
 
 
-    function createRank(grupo, chart, nome) {
+    function createRank(leads, chart, nome, group) {
         //ranking[ranking.length].leads
 
         let dados = {
             "name": nome,
-            "leads": grupo.length,
-            "id": chart
+            "leads": leads.length,
+            "id": chart,
+            "group": group,
+            "position": 0
           }
           ranking.unshift(dados);
 
-          ranking.sort((a, b) => (a.leads > b.leads) ? -1 : 1)
-
           if (ranking.length >= 11) {
+            ranking.sort((a, b) => (a.leads > b.leads) ? -1 : 1)
+
+            for (let index = 0; index < ranking.length; index++) {
+              ranking[index].position = index + 1
+              
+            }
+
               printBars()
           }
 
 
     }
 
-    function printBars() {
+    function printBars(tipo) {
 
+      if (tipo == 'rank') {
+        ranking.sort((a, b) => (a.leads > b.leads) ? -1 : 1)
+      } else {
+        ranking.sort((a, b) => (a.group > b.group) ? 1 : -1)
+      }
+      document.getElementById('main').innerHTML = ''
         for (let index = 0; index < ranking.length; index++) {
             
             if(ranking[index].leads < 1) {
@@ -303,12 +316,16 @@ function getLeads() {
     
             } else {
                 let title = document.createElement("div")
-                title.innerText = `${index+1}°. ${ranking[index].name}`
+                title.innerText = `${ranking[index].name}`
+                let subtitle = document.createElement("h5")
+                subtitle.innerText = `${ranking[index].position}° lugar`
                 let bar = document.createElement("div")
                 bar.innerText = `${ranking[index].leads} leads`
                 bar.style.width = `${ranking[index].leads/10}%`
+                bar.setAttribute("class", "div-bar")
                 bar.setAttribute("id", ranking[index].id)
 
+                title.appendChild(subtitle) 
                 document.getElementById('main').appendChild(title) 
                 document.getElementById('main').appendChild(bar)  
 

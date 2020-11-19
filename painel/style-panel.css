@@ -41,7 +41,6 @@ button:focus { outline: none; }
 }
 
 #main div {
-  padding: 10px;
   margin: 10px;
   border-radius: 5px;
   overflow: visible;
@@ -93,12 +92,6 @@ button:focus { outline: none; }
   background: rgb(66, 23, 61);
 }
 
-#main {
-      /* 1 pixel black shadow to left, top, right and bottom */
-      text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-  
-      font-family: sans; color: black;
-}
 
 .hidden {
   display: none;
@@ -106,4 +99,27 @@ button:focus { outline: none; }
 
 .active {
   border-bottom: 2px solid black !important;
+}
+
+h5 {
+  margin: 0;
+  font-weight: normal;
+  color: rgb(77, 77, 77);
+}
+
+#ordenacao {
+  margin: 20px;
+}
+
+.div-bar {
+  padding: 10px;
+    /* 1 pixel black shadow to left, top, right and bottom */
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.500), 0 2px rgba(0, 0, 0, 0.500), 2px 0 rgba(0, 0, 0, 0.500), 0 -1px black;
+
+    
+    color: white;
+}
+
+body {
+  font-family: 'Open sans';
 }
