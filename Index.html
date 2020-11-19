@@ -58,6 +58,7 @@
 <div id="counter">
   Baixe gratuitamente nosso e-book exclusivo e otimize os estudos do seu filho em tempos de aulas remotas.
   <h3 id="contador">Download gratuito termina em 5h 39m 23 s.</h3>
+  <button id="close" onclick="hideCounter()"><h3>X</h3></button>
 </div>
 
 
@@ -91,17 +92,18 @@
 
       </div>
       <div id="form-box">
-        <div class="formulario">
 
+        <h3>Baixe agora seu e-book gratuito!</h3>
+        <div class="formulario">
           <form method="POST" action="https://smtl.gama.academy/leads/1ccc7f61-25e3-11eb-bf8d-0d63c80760d2">
-            <h4>Nome completo:</h4>
+            <h5>Nome completo:</h5>
             <input name="name" type="text" class="input" pattern="^\D{2,}\s[\D\s]{2,}$" title="Digite seu nome completo"
               placeholder="Ex: José da Silva" required />
-            <h4>E-mail:</h4>
+            <h5>E-mail:</h5>
             <input name="email" type="email" class="input" title="Digite seu email" placeholder="Ex: email@email.com"
               required />
             <input name="redirectTo" type="hidden" value="https://renovafuturo.com.br/obrigado.html" />
-            <a href="ebook.pdf" download="E-BOOK"></a><input value="BAIXE NOSSO EBOOK!" class="input botao"
+            <a href="ebook.pdf" download="E-BOOK"></a><input id="form-btn" value="QUERO MEU E-BOOK!" class="input botao"
               type="submit" /></a>
             </input>
         </div>
@@ -144,8 +146,12 @@ Nossa metodologia consiste em orientar e direcionar família e alunos para o cam
 </footer>
 
 <script>
+
+  function hideCounter() {
+    document.getElementById('counter').classList.add('hidden')
+  }
   // Set the date we're counting down to
-  var countDownDate = new Date("Nov 20, 2020 12:00:00").getTime();
+  var countDownDate = new Date("Nov 20, 2020 11:59:00").getTime();
   
   // Update the count down every 1 second
   var x = setInterval(function() {
