@@ -50,6 +50,14 @@ img{
     padding-left: 40px;
 }
 
+#counter {
+    background: #095c58;
+    color: white;
+    font-family: 'Poppins';
+    padding: 20px;
+    text-align: center;
+}
+
 #logo-img {
     min-width: 100px;
 }
@@ -102,6 +110,15 @@ img{
         grid-template-columns: 1fr;
 
     }
+
+    #counter {
+        font-size: 0.8em;
+    }
+
+    #counter h3 {
+        display: inline;
+    }
+
     #form-box {
         margin: 0 auto;
         justify-self: center;

@@ -2,6 +2,39 @@
 <html>
 
 <head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-183540419-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-183540419-1');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '384749542771481'); 
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+  <img height="1" width="1" 
+  src="https://www.facebook.com/tr?id=384749542771481&ev=PageView
+  &noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+
+
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
@@ -15,32 +48,17 @@
     rel="stylesheet">
   <title>Renova Futuro</title>
 
-<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window,document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '943819379482673'); 
-  fbq('track', 'PageView');
-  </script>
-  <noscript>
-  <img height="1" width="1" 
-  src="https://www.facebook.com/tr?id=943819379482673&ev=PageView
-  &noscript=1"/>
-  </noscript>
-  <!-- End Facebook Pixel Code -->
+
 
 </head>
 
 <body>
 
 
-
+<div id="counter">
+  Baixe gratuitamente nosso e-book exclusivo e otimize os estudos do seu filho em tempos de aulas remotas.
+  <h3 id="contador">Download gratuito termina em 5h 39m 23 s.</h3>
+</div>
 
 
   <div id="hero">
@@ -124,6 +142,34 @@ Nossa metodologia consiste em orientar e direcionar família e alunos para o cam
 <footer>
 <p>Todos os direitos reservados à Renova</p>
 </footer>
+
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Nov 20, 2020 12:00:00").getTime();
+  
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+  
+    // Get today's date and time
+    var now = new Date().getTime();
+  
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+  
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+    // Display the result in the element with id="contador"
+    document.getElementById("contador").innerHTML = "Download gratuito termina em " + days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+  
+    
+  }, 1000);
+  </script>
+
 </body>
 
 </html>
